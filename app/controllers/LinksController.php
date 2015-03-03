@@ -1,5 +1,8 @@
 <?php
 
+use MyAdm\Exceptions\NonExistentHashException;
+use MyAdm\Validation\ValidationException;
+
 class LinksController extends \BaseController {
 
 	/**
@@ -31,7 +34,7 @@ class LinksController extends \BaseController {
 		}
 
 		return Redirect::home()->with([
-			'flash_message' => 'Here you go! ' . link_to($hash),
+			'flash_message' => 'Here you go! ' . link_to($hash, null, ['target' => '_blank']),
 			'hashed'        => $hash
 		]);
 	}
@@ -40,7 +43,7 @@ class LinksController extends \BaseController {
 	{
 		try
 		{
-			$url = Little::getUrlFromHash($hash);
+			$url = Little::getUrlByHash($hash);
 
 			return Redirect::to($url);
 		}

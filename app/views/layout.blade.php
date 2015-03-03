@@ -9,6 +9,13 @@
 <body>
 
 <div class="container">
+    @if(Session::has('flash_message'))
+        <div class="alert alert-info alert-dismissable">
+            <button class="close" type="button" data-dismiss="alert">&times;</button>
+            {{ Session::get('flash_message') }}
+        </div>
+    @endif
+
     @yield('content')
 </div>
 

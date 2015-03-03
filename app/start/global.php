@@ -79,3 +79,12 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+
+/*
+|--------------------------------------------------------------------------
+| Register Event Listeners
+|--------------------------------------------------------------------------
+|
+*/
+
+Event::listen('link.creating', 'MyAdm\Validation\LinkValidator@fire');
