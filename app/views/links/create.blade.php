@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="put-the-dang-thing-in-the-middle">
-        <h1>Shorten a Url</h1>
+        <h1>URL Shortener</h1>
 
         {{ Form::open(['url' => 'links']) }}
         <div class="form-group">
@@ -13,7 +13,9 @@
         {{ Form::close() }}
 
         @if(Session::has('hashed'))
-            <output>{{ link_to(Session::get('hashed'), null, ['target' => '_blank']) }}</output>
+            <div class="output">
+                {{ link_to(Session::get('hashed'), null, ['target' => '_blank']) }}
+            </div>
         @endif
     </div>
 @stop

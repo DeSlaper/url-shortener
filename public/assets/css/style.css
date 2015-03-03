@@ -4,7 +4,10 @@ h1 {
     font-family: Open Sans;
 }
 
-output { text-align: center; }
+div.output {
+    text-align: center;
+    font-size: 1.8em;
+}
 
 .put-the-dang-thing-in-the-middle {
     width: 80%;
