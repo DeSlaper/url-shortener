@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Redirect;
-
 class LinksController extends \BaseController {
 
 	/**
@@ -25,7 +23,7 @@ class LinksController extends \BaseController {
 	{
 		try
 		{
-			$hash = Little::make(Input::get('url');
+			$hash = Little::make(Input::get('url'));
 		}
 		catch (ValidationException $e)
 		{

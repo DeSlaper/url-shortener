@@ -6,4 +6,4 @@ Route::get('/', [
 ]);
 
 Route::post('links', 'LinksController@store');
-Route::get('{hash}', 'LinksContoller@translateHash');
+Route::get('{hash}', 'LinksController@translateHash');
