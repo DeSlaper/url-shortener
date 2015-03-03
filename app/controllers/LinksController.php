@@ -40,7 +40,7 @@ class LinksController extends \BaseController {
 	{
 		try
 		{
-			$url = Litte::getUrlFromHash($hash);
+			$url = Little::getUrlFromHash($hash);
 
 			return Redirect::to($url);
 		}
