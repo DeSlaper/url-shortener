@@ -88,3 +88,4 @@ require app_path().'/filters.php';
 */
 
 Event::listen('link.creating', 'MyAdm\Validation\LinkValidator@fire');
+Event::listen('link.clicked', 'MyAdm\Events\LinkClicked@fire');

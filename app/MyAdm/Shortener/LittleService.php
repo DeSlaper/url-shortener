@@ -32,7 +32,7 @@ class LittleService {
 
 		if ( ! $link) throw new NonExistentHashException;
 
-		$this->linkRepo->updateCounter($link);
+		\Event::fire('link.clicked', [$link->id]);
 
 		return $link->url;
 	}
