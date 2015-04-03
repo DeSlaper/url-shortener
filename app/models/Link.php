@@ -2,6 +2,6 @@
 
 class Link extends \Eloquent {
 
-	protected $fillable = ['url', 'hash'];
+	protected $fillable = ['url', 'hash', 'clicks'];
 
 }
