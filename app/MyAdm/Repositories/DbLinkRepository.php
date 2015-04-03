@@ -18,4 +18,11 @@ class DbLinkRepository implements LinkRepositoryInterface {
 	{
 		return Link::whereHash($hash)->first();
 	}
+
+	public function updateCounter($link)
+	{
+		$link::increment('clicks');
+	}
+
+
 }

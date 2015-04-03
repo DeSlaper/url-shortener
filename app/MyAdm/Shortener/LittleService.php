@@ -32,6 +32,8 @@ class LittleService {
 
 		if ( ! $link) throw new NonExistentHashException;
 
+		$this->linkRepo->updateCounter($link);
+
 		return $link->url;
 	}
 
