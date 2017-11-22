@@ -22,6 +22,8 @@ h1 {
 div.output {
     text-align: center;
     font-size: 1.8em;
+    display: table;
+    margin: 0 auto;
 }
 
 .put-the-dang-thing-in-the-middle {
